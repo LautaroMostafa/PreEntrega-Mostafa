@@ -1,0 +1,17 @@
+.carrito {
+    position: relative;
+}
+
+.iconoCarrito {
+    height: 35px;
+}
+
+.burbuja {
+    position: absolute;
+    background-color: black;
+    color: white;
+    right: 15px;
+    top: 15px;
+    padding: 4px 8px;
+    border-radius: 50%;
+}
