@@ -1,32 +1,24 @@
-import "./App.css"
-import Categorias from "./components/cateogorias/Categorias"
-import Carrito from "./components/carrito/Carrito"
-import Logo from "./components/logo/Logo"
-import Texto from "./components/Texto/Texto"
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom"
+import NavBar from "./components/NavBar/NavBar"
+import ItemListContainer from "./components/ItemLinsContainer/ItemListContainer"
+import ItemDetail from "./components/ItemDetail/ItemDetail"
 
 function App() {
   return (
     <>
-      <div className="navBar">
-        <div className="categoriasNav">
-          <Categorias />
-        </div>
-        <div>
-          <Logo />
-        </div>
-        <div>
-          <Carrito />
-        </div>
-      </div>
-
-      <div className="parrafo">
-          <h1>Bienvenidos</h1>
-          <Texto nombre="Jazon" edad="85"/>
-          <Texto nombre="Mandela" edad="75"/>
-          <Texto nombre="Arlert" edad="80"/>
-          <Texto nombre="Alias" edad="90"/>
-      </div>
-
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:id" element={<ItemListContainer />} />
+          <Route path="/item/:id" element={<ItemDetail />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

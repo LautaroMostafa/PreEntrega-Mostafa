@@ -1,11 +1,12 @@
 import "./Logo.css"
 import logo from "../../assets/logo.jpeg"
+import { Link } from "react-router-dom"
 
 function Logo() {
     return (
-    <div className="logoImg">
-    <img src={logo} alt="Logo de la aplicación" />
-    </div>
+        <Link className="logoImg" to="/">
+            <img src={logo} alt="Logo de la aplicación" />
+        </Link>
     )
 }
 

@@ -1,9 +1,8 @@
-import "./Carrito.css"
+import "./CartWidget.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
 
-function Carrito() {
-    
+function CartWidget() {
     return (
         <div className="carrito">
             <FontAwesomeIcon icon={faCartShopping} className="iconoCarrito"/>
@@ -12,4 +11,4 @@ function Carrito() {
     )
 }
 
-export default Carrito
+export default CartWidget

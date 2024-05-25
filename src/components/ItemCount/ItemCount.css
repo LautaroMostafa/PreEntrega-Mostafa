@@ -1,0 +1,21 @@
+.countContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.countContainer button {
+    margin: 5px;
+    font-size: 50px;
+    border-radius: 50px;
+    width: 50px;
+}
+
+.countWrapper {
+    position: relative;
+}
+
+.count {
+    font-size: 75px;
+}
