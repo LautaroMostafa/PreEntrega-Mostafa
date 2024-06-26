@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import "./ItemListContainer.css"
-import { useParams, Link } from "react-router-dom"
+import { useParams } from "react-router-dom"
+import ItemList from "../ItemList/ItemList"
 
 function ItemListContainer() {
     const [productos, setProductos] = useState([])
@@ -22,17 +23,7 @@ function ItemListContainer() {
     }, [id])
 
     return (
-            <div className="tarjeta">
-                {productos.map(producto => (
-                    <div className="tarjetaContenido" key={producto.id}>
-                        <img src={producto.images[0]} alt={producto.name} />
-                        <h1>{producto.title}</h1>
-                        <h2>${producto.price}</h2>
-                        <h3>Stock: {producto.stock}</h3>
-                        <Link to={`/item/${producto.id}`}><button>Comprar</button></Link>
-                    </div>
-                ))}
-            </div>
+        <ItemList productos={productos}/>
     )
 }
 

@@ -4,6 +4,7 @@ import Logo from "../Logo/Logo"
 import Categorias from "../Categorias/Categorias.jsx"
 
 function NavBar() {
+
     return (
         <div className="navBar">    
             <div className="categoriasNav">

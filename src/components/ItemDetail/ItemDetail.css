@@ -21,3 +21,9 @@
     font-size: 40px;
     margin: 20px;
 }
+
+.buttonAddCart {
+    border-radius: 30px;
+    background-color: blue;
+    color: white;
+}
